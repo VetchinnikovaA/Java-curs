@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="basepanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="890.0" style="-fx-background-color: powderblue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane fx:id="filmpanel" layoutX="291.0" layoutY="123.0" prefHeight="478.0" prefWidth="599.0" style="-fx-border-color: black; -fx-background-image: papier-de-couleur-abstraite-et-fond-de-papier-pastel-colore-creatif_6529-278;" visible="false">
+         <children>
+            <ImageView fitHeight="478.0" fitWidth="596.0" layoutX="1.0" layoutY="-1.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@papier-de-couleur-abstraite-et-fond-de-papier-pastel-colore-creatif_6529-278.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="nameusersearch" layoutX="247.0" layoutY="12.0" prefHeight="26.0" prefWidth="183.0" promptText="Фамилия" />
+            <TextField fx:id="namefilmsearch" layoutX="25.0" layoutY="12.0" prefHeight="26.0" prefWidth="184.0" promptText="Название фильма" />
+            <Button fx:id="searchpanelbutton" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="483.0" layoutY="10.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="66.0" text=" Поиск" textOverrun="CLIP">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Button>
+            <TableView fx:id="filmtable1" layoutX="2.0" layoutY="41.0" prefHeight="437.0" prefWidth="596.0">
+               <columns>
+                  <TableColumn fx:id="idfilm1" prefWidth="41.670196533203125" text="id" />
+                  <TableColumn fx:id="namefilm1" prefWidth="126.20697021484375" text="Название" />
+                  <TableColumn fx:id="ganrefilm1" prefWidth="78.71932983398438" text="Жанр" />
+                  <TableColumn fx:id="pricefilm1" prefWidth="58.975341796875" text="Стоимость" />
+                  <TableColumn fx:id="statusfilm1" prefWidth="82.71929931640625" text="Статус" />
+                  <TableColumn fx:id="datefilm1" prefWidth="94.28070068359375" text="Дата возврата" />
+                  <TableColumn fx:id="userfilmname1" prefWidth="112.498291015625" text="Фамилия пользователя" />
+               </columns>
+            </TableView>
+            <ImageView fitHeight="396.0" fitWidth="581.0" layoutX="3.0" layoutY="68.0" opacity="0.66" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@papier-de-couleur-abstraite-et-fond-de-papier-pastel-colore-creatif_6529-278.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="startpanel" layoutX="290.0" layoutY="122.0" prefHeight="478.0" prefWidth="601.0" style="-fx-border-color: black;">
+         <children>
+            <ImageView fitHeight="478.0" fitWidth="599.0" layoutX="1.0">
+               <image>
+                  <Image url="@papier-de-couleur-abstraite-et-fond-de-papier-pastel-colore-creatif_6529-278.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="80.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Авторизируйтесь для получения доступа к полноценному функционалу программы." textAlignment="CENTER" wrappingWidth="457.205322265625">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="logopanel" layoutX="-3.0" layoutY="-1.0" prefHeight="109.0" prefWidth="895.0" style="-fx-border-color: black;">
+         <children>
+            <AnchorPane fx:id="outlogopanel" layoutX="495.0" prefHeight="122.0" prefWidth="397.0" visible="false">
+               <children>
+                  <Button fx:id="signoutbutton" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="271.0" layoutY="62.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="67.0" text=" Выход" textOverrun="CLIP">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="username" layoutX="238.0" layoutY="16.0" prefHeight="30.0" prefWidth="129.0" style="-fx-background-color: powderblue;" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="inlogopanel" layoutX="474.0" prefHeight="119.0" prefWidth="415.0">
+               <children>
+                  <PasswordField fx:id="password" layoutX="149.0" layoutY="52.0" prefHeight="28.0" prefWidth="168.0" promptText="Пароль" />
+                  <TextField fx:id="login" layoutX="149.0" layoutY="17.0" prefHeight="22.0" prefWidth="168.0" promptText="Логин" />
+                  <Button fx:id="signinbutton" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="326.0" layoutY="52.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="67.0" text="  Вход" textOverrun="CLIP">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="closebutton" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="381.0" layoutY="6.0" mnemonicParsing="false" prefHeight="7.0" prefWidth="25.0" text="X" textOverrun="CLIP">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="24.0" layoutY="-10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@pride_logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="28.0" layoutY="57.0" prefHeight="35.0" prefWidth="190.0" text="видеопрокат" textFill="#fa46a2">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button fx:id="filmbutton" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutY="122.0" mnemonicParsing="false" prefHeight="82.0" prefWidth="291.0" style="-fx-background-color: #cfe4ea; -fx-border-color: black;" text="        Фильмы" textFill="#fa46a2" textOverrun="CLIP">
+         <font>
+            <Font name="System Bold Italic" size="31.0" />
+         </font>
+      </Button>
+      <Button fx:id="historybutton" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutY="202.0" mnemonicParsing="false" prefHeight="82.0" prefWidth="291.0" style="-fx-background-color: #cfe4ea; -fx-border-color: black;" text="      История" textFill="#fa46a2" textOverrun="CLIP">
+         <font>
+            <Font name="System Bold Italic" size="31.0" />
+         </font>
+      </Button>
+      <Button fx:id="prokatbutton" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutY="283.0" mnemonicParsing="false" prefHeight="82.0" prefWidth="291.0" style="-fx-background-color: #cfe4ea; -fx-border-color: black;" text="        Прокат" textFill="#fa46a2" textOverrun="CLIP">
+         <font>
+            <Font name="System Bold Italic" size="31.0" />
+         </font>
+      </Button>
+      <Button fx:id="statisticbutton" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutY="363.0" mnemonicParsing="false" prefHeight="82.0" prefWidth="291.0" style="-fx-background-color: #cfe4ea; -fx-border-color: black;" text="    Статистика" textFill="#fa46a2" textOverrun="CLIP">
+         <font>
+            <Font name="System Bold Italic" size="31.0" />
+         </font>
+      </Button>
+      <Button fx:id="addfilmbutton" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutY="443.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="291.0" style="-fx-background-color: #cfe4ea; -fx-border-color: black;" text="Добавить фильм" textFill="#fa46a2" textOverrun="CLIP">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Button>
+      <AnchorPane fx:id="historypanel" layoutX="289.0" layoutY="123.0" prefHeight="478.0" prefWidth="601.0" style="-fx-border-color: black;" visible="false">
+         <children>
+            <TableView fx:id="historytable" layoutX="1.0" layoutY="1.0" prefHeight="478.0" prefWidth="600.0">
+              <columns>
+                  <TableColumn fx:id="id_h" prefWidth="31.0" text="h_id" />
+                  <TableColumn fx:id="id_f" prefWidth="31.0" text="id" />
+                <TableColumn fx:id="name_h" prefWidth="79.0" text="Название" />
+                  <TableColumn fx:id="price_h" minWidth="2.0" prefWidth="76.0" text="Стоимость" />
+                  <TableColumn fx:id="getdate_h" minWidth="0.0" prefWidth="92.0" text=" Дата выдачи" />
+                  <TableColumn fx:id="returndate_h" minWidth="0.0" prefWidth="100.5743408203125" text="Дата возврата" />
+                  <TableColumn fx:id="userfilmname" editable="false" prefWidth="102.1446533203125" sortable="false" text="Фактическая дата возврата" />
+                  <TableColumn fx:id="returndate_h1" minWidth="0.0" prefWidth="86.8553466796875" text="Фамилия Пользователя" />
+              </columns>
+            </TableView>
+            <ImageView fitHeight="438.0" fitWidth="601.0" layoutY="27.0" opacity="0.57" smooth="false">
+               <image>
+                  <Image url="@papier-de-couleur-abstraite-et-fond-de-papier-pastel-colore-creatif_6529-278.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Prokatpanel" layoutX="291.0" layoutY="123.0" prefHeight="478.0" prefWidth="600.0" style="-fx-border-color: black;" visible="false">
+         <children>
+            <ImageView fitHeight="478.0" fitWidth="598.0" layoutX="1.0" layoutY="1.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@papier-de-couleur-abstraite-et-fond-de-papier-pastel-colore-creatif_6529-278.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="namefilmprokat" layoutX="48.0" layoutY="30.0" prefHeight="28.0" prefWidth="178.0" promptText="Название" />
+            <TextField fx:id="nameuserprokat" layoutX="330.0" layoutY="30.0" prefHeight="28.0" prefWidth="178.0" promptText="Фамилия" />
+            <DatePicker fx:id="getdate" layoutX="48.0" layoutY="88.0" prefHeight="28.0" prefWidth="178.0" promptText="Дата ввыдачи" />
+            <DatePicker fx:id="datereturn" layoutX="330.0" layoutY="88.0" prefHeight="28.0" prefWidth="178.0" promptText="Дата возврата" />
+            <Button fx:id="prokatpanelbutton" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="50.0" layoutY="146.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="178.0" text="      Оформить прокат" textOverrun="CLIP">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="returnpanelbutton" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="330.0" layoutY="146.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="178.0" text="      Оформить возврат" textOverrun="CLIP">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="statisticpanel" layoutX="290.0" layoutY="122.0" prefHeight="478.0" prefWidth="601.0" style="-fx-border-color: black;" visible="false">
+         <children>
+            <ImageView fitHeight="478.0" fitWidth="599.0" layoutX="1.0" layoutY="1.0" smooth="false">
+               <image>
+                  <Image url="@papier-de-couleur-abstraite-et-fond-de-papier-pastel-colore-creatif_6529-278.png" />
+               </image>
+            </ImageView>
+            <DatePicker fx:id="datebegininhperiod" layoutX="50.0" layoutY="48.0" prefHeight="30.0" prefWidth="193.0" promptText="Начало периода" />
+            <DatePicker fx:id="dateendperiod" layoutX="351.0" layoutY="48.0" prefHeight="30.0" prefWidth="193.0" promptText="Конец периода" />
+            <Button fx:id="statisticpanelbutton" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="215.0" layoutY="129.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="170.0" text="  Показать статистику" textOverrun="CLIP">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Button>
+            <Text fx:id="Statisticfield" layoutX="149.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="291.31940531118414">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="addfilmpanel" layoutX="291.0" layoutY="123.0" prefHeight="478.0" prefWidth="601.0" style="-fx-border-color: black;" visible="false">
+         <children>
+            <ImageView fitHeight="478.0" fitWidth="598.0" layoutX="1.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@papier-de-couleur-abstraite-et-fond-de-papier-pastel-colore-creatif_6529-278.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="nameaddfilmpanel" layoutX="69.0" layoutY="47.0" prefHeight="27.0" prefWidth="168.0" promptText=" Название" />
+            <TextField fx:id="ganraddfilmpanel" layoutX="69.0" layoutY="92.0" prefHeight="27.0" prefWidth="168.0" promptText="Жанр" />
+            <TextField fx:id="priceaddfilmpanel" layoutX="69.0" layoutY="133.0" prefHeight="27.0" prefWidth="168.0" promptText="Стоимость" />
+            <Button fx:id="addfilmpanelbutton" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="82.0" layoutY="179.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="127.0" text="Добавить фильм" textOverrun="CLIP">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Accordion />
+   </children>
+</AnchorPane>
